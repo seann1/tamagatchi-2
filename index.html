@@ -1,47 +1,132 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title></title>
+    <script src="js/jquery-1.11.1.js">
+    </script>
+    <script src="js/scripts.js">
+    </script>
+    <title>
+    </title>
   </head>
 
   <body>
-    <div class="container">
+    <div class="container text-center">
 
-    <h2>Tamagotchi!!!</h2>
-    <br><br><br>
-    <div id="create-tom">
-      <form id= "petCreator">
-        <label for="petName">Name Your Pet!</label>
-              <input type="text" placeholder="Type your pet's name here" id="petName">
-              <button type="submit" class="btn btn-danger">Create My Pet!</button>
-      </form>
-    </div>
-    <div id="tom">
-          <h1><span id="putName"></span></h1>
-          <span id="moodLevel"></span>
-          <div class="row">
-            <div class="col-md-4" id="food">
-              <h2>Food</h2>
-              <span id="foodNum"></span>
-              <button type="feed" id="feed" class="btn btn-warning">Feed</button>
-            </div>
-              <div class="col-md-4" id="sleep">
-              <h2>Sleep</h2>
-              <span id="sleepNum"></span>
-              <button type="sleep" id="sleep" class="btn btn-primary">Rest</button>
-            </div>
-            <div class="col-md-4" id="active">
-              <h2>Activity</h2>
-              <span id="activityNum"></span>
-              <button type="play" id="play" class="btn other">Play With</button>
+      <div class="tom-head">
+        <h2>
+          Tamagotchi
+        </h2>
+      </div>
+      <br>
+      <div class="animated fadeIn" id="create-tom">
+        <form id="petCreator">
+          <label for="petName">
+            Name Your Pet!
+          </label>
+          <br>
+          <input type="text" placeholder="Type your pet's name here" id="petName">
+          <br>
+          <br>
+          <button type="submit" class="btn btn-danger">
+            Create My Pet!
+          </button>
+        </form>
+      </div>
+      <div class="animated fadeIn" id="tom">
+        <div>
+          <div class="nameBackground">
+            <h1>
+              <span id="putName">
+              </span>
+            </h1>
+          </div>
+          <div id="bounceFace">
+        </div>
+        <h3>
+          <em>
+            <span id="moodLevel">
+            </span>
+          </em>
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4" id="food">
+          <h2>
+            Food
+          </h2>
+          <div class="progress">
+            <div id="foodBar" class="progress-bar progress-bar-striped progress-bar-success active"  role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+              <span class="sr-only">
+                1% Complete
+              </span>
             </div>
           </div>
-    </div>
-    <h1><span id="alert"></span></h1>
+          <h3>
+            <span id="foodNum">
+            </span>
+          </h3>
+          <br>
+          <br>
+          <br>
+          <button type="feed" id="feed" class="btn btn-warning btn-block">
+            Feed
+          </button>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4" id="sleep">
+          <h2>
+            Sleep
+          </h2>
+            <div class="progress">
+              <div id="sleepBar" class="progress-bar progress-bar-striped progress-bar-danger active"  role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                <span class="sr-only">
+                  1% Complete
+                </span>
+              </div>
+            </div>
+          <h3>
+            <span id="sleepNum">
+            </span>
+          </h3>
+          <br>
+          <br>
+          <br>
+          <button type="sleep" id="sleep" class="btn btn-primary btn-block">
+            Rest
+          </button>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4" id="active">
+          <h2>
+            Activity
+          </h2>
+            <div class="progress">
+                <div id="activityBar" class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                  <span class="sr-only">
+                    1% Complete
+                  </span>
+                </div>
+              </div>
+          <h3>
+            <span id="activityNum">
+            </span>
+          </h3>
+          <br>
+          <br>
+          <br>
+          <button type="play" id="play" class="btn other btn-block">
+            Play With
+          </button>
+        </div>
+      </div>
+      </div>
+      <h1>
+        <em>
+          <span id="alert">
+          </span>
+        </em>
+      </h1>
 
     </div>
   </body>
