@@ -11,7 +11,36 @@
   <body>
     <div class="container">
 
-    <h1>Project Title</h1>
+    <h2>Tamagotchi!!!</h2>
+    <br><br><br>
+    <div id="create-tom">
+      <form id= "petCreator">
+        <label for="petName">Name Your Pet!</label>
+              <input type="text" placeholder="Type your pet's name here" id="petName">
+              <button type="submit" class="btn btn-danger">Create My Pet!</button>
+      </form>
+    </div>
+    <div id="tom">
+          <h1><span id="putName"></span></h1>
+          <div class="row">
+            <div class="col-md-4" id="food">
+              <h2>Food</h2>
+              <span id="foodNum"></span>
+              <button type="feed" id="feed" class="btn btn-warning">Feed</button>
+            </div>
+              <div class="col-md-4" id="sleep">
+              <h2>Sleep</h2>
+              <span id="sleepNum"></span>
+              <button type="sleep" id="sleep" class="btn btn-primary">Rest</button>
+            </div>
+            <div class="col-md-4" id="active">
+              <h2>Activity</h2>
+              <span id="activityNum"></span>
+              <button type="play" id="play" class="btn other">Play With</button>
+            </div>
+          </div>
+    </div>
+    <h1><span id="alert"></span></h1>
 
     </div>
   </body>
