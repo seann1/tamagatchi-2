@@ -37,3 +37,7 @@ button {
 .other {
   background-color: #07F567;
 }
+
+#moodLevel {
+  font-size: 30px;
+}

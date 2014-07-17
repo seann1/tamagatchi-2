@@ -41,8 +41,18 @@ var tamagotchi = {
       } else {
         return false;
       }
+    },
+    isHappy: function() {
+      var x = this.foodLevel + this.activityLevel + this.sleepLevel;
+      if (x > 20 ) {
+        return this.name + " Is Very Happy";
+      } else if (x <= 20 && x > 10) {
+        return this.name + " Is Okay";
+      } else {
+        return this.name + " Is Almost Dead";
+      };
     }
-}
+};
 
 $(document).ready(function() {
   $("form#petCreator").submit(function(event){
@@ -61,6 +71,7 @@ $(document).ready(function() {
         $("#sleepNum").text(newPet.sleepLevel);
         $("#activityNum").text(newPet.activityLevel);
         $("#putName").text(petName);
+        $("#moodLevel").text(newPet.isHappy());
       } else {
         window.clearInterval(time);
         $("#tom").hide();
